@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Culinary Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>AI Culinary Assistant</h1>
+            <p>🍽️ Snap. Identify. Cook! Let's Turn Food Photos into Delicious Recipes! 🍳</p>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div class="upload-area" id="dropArea">
+                    <div class="upload-icon">
+                        🍔
+                    </div>
+                    <p>Drag & drop your food image here or <span class="browse-text">browse</span></p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                <button id="uploadButton" class="primary-button">Upload Image</button>
+                <div class="preview-container" id="previewContainer" style="display: none;">
+                    <img id="imagePreview" src="" alt="Preview">
+                    <button id="changeImageButton" class="secondary-button">Change Image</button>
+                </div>
+            </div>
+
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <div class="food-identification">
+                    <h2>Identified Food</h2>
+                    <p id="foodName">Loading...</p>
+                </div>
+
+                <div class="recipe-metadata" id="recipeMetadata" style="display: none;">
+                    <div class="metadata-item">
+                        <span class="metadata-icon">⏱️</span>
+                        <span class="metadata-label">Prep:</span>
+                        <span id="prepTime" class="metadata-value">-</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-icon">🍳</span>
+                        <span class="metadata-label">Cook:</span>
+                        <span id="cookTime" class="metadata-value">-</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-icon">👥</span>
+                        <span class="metadata-label">Servings:</span>
+                        <span id="servings" class="metadata-value">-</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-icon">📊</span>
+                        <span class="metadata-label">Difficulty:</span>
+                        <span id="difficulty" class="metadata-value">-</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-icon">🌍</span>
+                        <span class="metadata-label">Cuisine:</span>
+                        <span id="cuisine" class="metadata-value">-</span>
+                    </div>
+                </div>
+
+                <div class="recipe-details">
+                    <div class="ingredients-section">
+                        <h3>Ingredients</h3>
+                        <ul id="ingredientsList"></ul>
+                    </div>
+
+                    <div class="instructions-section">
+                        <h3>Cooking Instructions</h3>
+                        <ol id="instructionsList"></ol>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>AI Culinary Assistant &copy; 2025</p>
+            <p style="margin-top: 0.5rem;">Created by <strong>Tejush</strong> and <strong>Swarnim</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
