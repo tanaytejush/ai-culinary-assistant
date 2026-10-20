@@ -116,3 +116,8 @@ python3 app.py
 ## License
 
 This project is for educational purposes.
+
+
+---
+
+<sub>Made by [tanaytejush](https://github.com/tanaytejush)</sub>
